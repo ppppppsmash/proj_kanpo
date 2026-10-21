@@ -25,6 +25,13 @@
   --tracking-widest-jp: 0.3em;
 }
 
+/* Cormorant はオールドスタイル数字が既定。font-display 利用箇所は常にライニング数字にする */
+@utility font-display {
+  font-family: var(--font-display);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: "lnum" 1, "pnum" 1;
+}
+
 @layer base {
   html {
     color-scheme: dark;
